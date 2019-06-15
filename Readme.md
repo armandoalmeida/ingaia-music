@@ -31,6 +31,15 @@ Seu serviço deve ser construído com atenção aos seguintes aspectos:
 Por conta da simplicidade e performance, a liguagem escolhida para o desenvolvimento foi o NodeJS. Essa linguagem, apesar de simples,
 é altamente escalável e flexível. Por conta disso, atende os requisitos não funcionais relacionados a Latência e a Escalabilidade. 
 
+Cidade, País (ISO 3166) ou somente Cidade
+
+https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
+
+### Documentação
+
+API OpenWeather - https://openweathermap.org/current#name
+
+
 ## Acesso
 
 ### Ambiente local
