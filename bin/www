@@ -4,9 +4,11 @@
  * Module dependencies.
  */
 
-const app = require('../app');
-const debug = require('debug')('ingaiamusicstation:server');
-const http = require('http');
+import app from '../app';
+import debugLib from 'debug';
+import http from 'http';
+
+const debug = debugLib('ingaiamusicstation:server');
 
 /**
  * Normalize a port into a number, string, or false.

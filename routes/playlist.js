@@ -1,6 +1,7 @@
-const express = require('express');
+import express from 'express';
+import request from "request";
+
 const router = express.Router();
-const request = require("request");
 
 const weatherAppId = "012fb3d2351e593e6d57e41611ad97f0";
 

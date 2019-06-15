@@ -1,6 +1,6 @@
-const express = require('express');
-const fs = require('fs');
-const showdown = require('showdown');
+import express from 'express';
+import fs from 'fs';
+import showdown from 'showdown';
 
 const router = express.Router();
 

@@ -1,11 +1,11 @@
-const express = require('express');
-const path = require('path');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
-const createError = require('http-errors');
-const indexRouter = require('./routes/index');
-const playlistRouter = require('./routes/playlist');
+import createError from 'http-errors';
+import indexRouter from './routes/index';
+import playlistRouter from './routes/playlist';
 
 const app = express();
 
