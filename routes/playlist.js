@@ -1,16 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const request = require("request");
 
-router.get('/:city', function (req, res, next) {
-  res.json({
-    city: req.params.city,
-    playlist: [
-      {
-        author: 'Pink Floyd',
-        song: 'Hey You'
-      }
-    ]
+const weatherAppId = "012fb3d2351e593e6d57e41611ad97f0";
+
+router.get('/:city', (req, res, next) => {
+
+  const weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${req.params.city},BR&APPID=${weatherAppId}`;
+
+  request.get(weatherURL, (error, response, body) => {
+    if (error) {
+      return console.error(error);
+    }
+    res.json(JSON.parse(body))
   });
+
 });
 
 module.exports = router;

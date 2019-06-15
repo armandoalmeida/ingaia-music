@@ -1,19 +1,20 @@
-var express = require('express');
-var router = express.Router();
-var fs = require('fs');
+const express = require('express');
+const fs = require('fs');
+const showdown = require('showdown');
 
-var showdown = require('showdown'),
-    converter = new showdown.Converter();
+const router = express.Router();
+
+const converter = new showdown.Converter();
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('/', (req, res, next) => {
 
     // carrega o conteudo o arquivo readme
-    var file = fs.readFileSync(__dirname + '/../Readme.md', 'utf8');
-    var readme = converter.makeHtml(file.toString());
+    const file = fs.readFileSync(__dirname + '/../Readme.md', 'utf8');
+    const readme = converter.makeHtml(file.toString());
 
     // carrega o template da pagina inicial
-    var template = fs.readFileSync(__dirname + '/../template.html', 'utf8');
+    let template = fs.readFileSync(__dirname + '/../template.html', 'utf8');
     template = template.toString().replace("{{title}}", "inGaia Music Station");
     template = template.toString().replace("{{content}}", readme);
 
