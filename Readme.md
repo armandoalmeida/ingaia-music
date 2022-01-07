@@ -1,4 +1,4 @@
-# inGaia Music Station API
+# Music Station API
 
 ## Desafio
 
